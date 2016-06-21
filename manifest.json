@@ -1,8 +1,10 @@
 {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
   "manifest_version": 2,
-  "name": "Githunt",
-  "short_name": "Githunt",
-  "description": "Replace the new tab with a list of trending repositories on github belonging to any technology that you chose.",
+  "name": "GitHunt Dark",
+  "short_name": "GitHunt Dark",
+  "description": "New tab page to show you the top trending GitHub repositories for a programming language or technology of your choosing",
   "version": "2",
   "permissions": [
     "tabs",
@@ -18,10 +20,10 @@
   "chrome_url_overrides": {
     "newtab": "githunt.html"
   },
-  "homepage_url": "http://kamranahmed.info/",
+  "homepage_url": "https://steviehoward.com/",
   "options_page": "options.html",
   "browser_action": {
-    "default_title": "Githunt",
+    "default_title": "GitHunt Dark",
     "default_icon": "assets/img/icon128.png"
   }
 }
