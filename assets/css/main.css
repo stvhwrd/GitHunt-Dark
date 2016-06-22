@@ -1,19 +1,31 @@
+/*define some color variables, this pallette taken from GitHub Dark - https://greasyfork.org/en/scripts/15562-github-dark-script
+Usage example...  color: var(--green)
+*/
+
+:root {
+    --darkest: #191919;
+    --dark: #262626;
+    --light: #D9D9D9;
+    --lightest: #FEFEFE;
+    --blue: #316CBA;
+    --green: #478948;
+}
 .btn, a, body {
-    color: #95A0A5
+    color: var(--light)
 }
 @font-face {
     font-family: roboto-regular;
-    src: url(assets/fonts/Roboto-Regular.woff) format('woff');
+    src: url(../fonts/Roboto-Regular.woff) format('woff');
     font-weight: 400
 }
 @font-face {
     font-family: roboto-light;
-    src: url(assets/fonts/Roboto-Light.woff) format('woff');
+    src: url(../fonts/Roboto-Light.woff) format('woff');
     font-weight: lighter
 }
 @font-face {
     font-family: roboto-medium;
-    src: url(assets/fonts/Roboto-Medium.woff) format('woff');
+    src: url(../fonts/Roboto-Medium.woff) format('woff');
     font-weight: 600
 }
 *, :after, :before {
@@ -25,7 +37,7 @@ body {
     padding-top: 1px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    background: #101A20
+    background: var(--darkest)
 }
 a {
     text-decoration: none
@@ -36,31 +48,11 @@ a {
     padding: 8px 12px;
     border: 2px solid #333;
     margin: 0 5px;
-    background: #fff;
-    box-shadow: 1px 1px #B5ACAC;
+    background: var(--lightest);
     outline: 0
-}
-.quote-item a {
-    border-bottom: 1px solid #0B0BBD;
-    padding-bottom: 6px;
-    color: #00f
-}
-.active {
-    background: #CECECE
-}
-.highlight {
-    color: #b300de
 }
 .main {
     position: relative
-}
-#particles-js {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 100%;
-    z-index: -5
 }
 .top-header {
     text-align: center;
@@ -101,42 +93,33 @@ div.container {
     box-sizing: border-box;
     padding: 15px;
     height: 200px;
-    background: #323B40;
+    background: var(--dark);
     float: left;
     position: relative;
     margin: 0 20px 20px 0;
     border-radius: 4px;
-    box-shadow: 1px 1px 1px 1px #4E5B62;
-    color: #fefefe
+    color: var(--lightest)
 }
 .content-item .header {
     font-weight: 700;
     font-size: 17px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    color: var(--lightest)
 }
 .content-item p.tagline {
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px
+    line-height: 20px;
+    color: var(--light)
 }
 .content-item .footer {
     position: absolute;
-    bottom: 12px
+    bottom: 12px;
+    color: var(--blue)
 }
 div.footer span.footer-stat {
     margin: 0 10px 0 0;
     font-size: 13px
-}
-.batch-head {
-    position: relative;
-    top: -25px
-}
-.batch-head a {
-    margin: 0 11px 0 0;
-    border: 2px solid;
-    padding: 5px 12px;
-    box-shadow: 2px 2px;
-    font-family: montserrat-regular
 }
 .clearfix {
     clear: both
@@ -163,7 +146,6 @@ h1.date-head:first-letter {
     padding-right: 0;
     position: relative;
     cursor: pointer;
-    border-color: #fff
 }
 .btn-select select {
     font-size: 16px;
@@ -173,16 +155,17 @@ h1.date-head:first-letter {
     height: 34px;
     -webkit-appearance: none;
     display: inline-block;
-    width: 150px;
+    width: 140px;
     outline: 0;
-    background: #fff;
+    background: var(--light);
     padding: 0 5px 0 10px;
     cursor: pointer
 }
 .btn-select .fa {
     position: absolute;
     right: 5px;
-    top: 10px
+    top: 10px;
+    color: var(--darkest)
 }
 div.footer span.footer-stat .fa {
     margin-right: 2px
@@ -199,12 +182,4 @@ div.footer span.footer-stat .fa {
     text-overflow: ellipsis!important;
     white-space: nowrap;
     overflow: hidden
-}
-.muted {
-    color: #BFB7B7
-}
-.quote-item {
-    margin: 60px 0 20px;
-    padding: 20px 10px;
-    background: #ccc
 }
