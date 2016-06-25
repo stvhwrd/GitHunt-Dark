@@ -48,7 +48,7 @@ a {
     padding: 8px 12px;
     border: 2px solid #333;
     margin: 0 5px;
-    background: var(--lightest);
+    background: var(--light);
     outline: 0
 }
 .main {
@@ -146,18 +146,20 @@ h1.date-head:first-letter {
     padding-right: 0;
     position: relative;
     cursor: pointer;
+    border-color: var(--light);
+    border-radius: 2px;
 }
 .btn-select select {
     font-size: 16px;
     line-height: 20px;
     border: 0;
-    border-radius: 0;
+    border-radius: 0px;
     height: 34px;
     -webkit-appearance: none;
     display: inline-block;
     width: 140px;
     outline: 0;
-    background: var(--light);
+    background-color: var(--light);
     padding: 0 5px 0 10px;
     cursor: pointer
 }
