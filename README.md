@@ -32,6 +32,6 @@ Here is how you can do that
 I'd love to hear what you have to say. Reach me out at kamranahmed.se@gmail.com or on twitter @kamranahmed_se
 
 ## License
-MIT © [Kamran Ahmed](https://kamranahmed.info)
+MIT © [Kamran Ahmed](https://kamranahmed.info) and [Stevie Howard](https://steviehoward.com) 2016
 
 
