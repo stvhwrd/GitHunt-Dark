@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "name": "GitHunt Dark",
   "short_name": "GitHunt Dark",
-  "description": "New tab page to show you the top trending GitHub repositories for a programming language or technology of your choosing",
+  "description": "New tab page to show you the top trending GitHub repositories, either \"in general\" or for a specific programming language.",
   "version": "2",
   "permissions": [
     "tabs",
@@ -20,7 +20,7 @@
   "chrome_url_overrides": {
     "newtab": "githunt.html"
   },
-  "homepage_url": "https://steviehoward.com/",
+  "homepage_url": "https://github.com/stvhwrd/githunt-dark",
   "options_page": "options.html",
   "browser_action": {
     "default_title": "GitHunt Dark",
