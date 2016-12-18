@@ -1,18 +1,41 @@
+/**
+ * Options module to manage the options
+ * @returns {{init: init}}
+ * @constructor
+ */
 function HubOptions() {
-    function t() {
-        $(document).on("click", ".save-token", function(t) {
-            t.preventDefault(), n.persistFilters(".githunt_token"), $(".quote-item").html("Woohoo! Token saved, happy hunting.")
-        })
+
+    var hubStorage = new HubStorage();
+
+    /**
+     * Performs the UI bindings
+     */
+    function bindUI() {
+        $(document).on('click', '.save-token', function (e) {
+            e.preventDefault();
+
+            hubStorage.persistFilters('.githunt_token');
+            $('.quote-item').html('Woohoo! Token saved, happy hunting.');
+        });
     }
-    var n = new HubStorage;
+
     return {
-        init: function() {
-            var e = n.populateFilters(".githunt_token");
-            e && $(".quote-item").html("Token already saved. Better go for the hunt!"), t()
+
+        /**
+         * Initializes the options page
+         */
+        init: function () {
+            var tokenPopulated = hubStorage.populateFilters('.githunt_token');
+            if (tokenPopulated) {
+                $('.quote-item').html('Token already saved. Better go for the hunt!');
+            }
+
+            bindUI();
         }
-    }
+    };
 }
-$(function() {
-    var t = new HubOptions;
-    t.init()
+
+$(function () {
+    var hubOptions = new HubOptions();
+    hubOptions.init();
 });

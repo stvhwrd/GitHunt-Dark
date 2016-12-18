@@ -4,8 +4,8 @@
   "manifest_version": 2,
   "name": "GitHunt Dark",
   "short_name": "GitHunt Dark",
-  "description": "New tab page to show you the top trending GitHub repositories, either \"in general\" or for a specific programming language.",
-  "version": "2.4",
+  "description": "A new tab page that displays the top trending GitHub repositories.",
+  "version": "2.5",
   "permissions": [
     "tabs",
     "storage",
@@ -18,7 +18,7 @@
     "128": "assets/img/icon128.png"
   },
   "chrome_url_overrides": {
-    "newtab": "githunt.html"
+    "newtab": "githunt-dark.html"
   },
   "homepage_url": "https://github.com/stvhwrd/githunt-dark",
   "options_page": "options.html",

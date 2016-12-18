@@ -10,83 +10,131 @@ Usage example...  color: var(--green)
     --blue: #316CBA;
     --green: #478948;
 }
-.btn, a, body {
-    color: var(--light)
-}
+
+
 @font-face {
-    font-family: roboto-regular;
-    src: url(../fonts/Roboto-Regular.woff) format('woff');
-    font-weight: 400
+    font-family: "roboto-regular";
+    src: url("../fonts/Roboto-Regular.woff") format('woff');
+    font-weight: normal;    /* font-weight of 400; */
 }
+
 @font-face {
-    font-family: roboto-light;
-    src: url(../fonts/Roboto-Light.woff) format('woff');
-    font-weight: lighter
+    font-family: "roboto-light";
+    src: url("../fonts/Roboto-Light.woff") format('woff');
+    font-weight: lighter;
 }
+
 @font-face {
-    font-family: roboto-medium;
-    src: url(../fonts/Roboto-Medium.woff) format('woff');
-    font-weight: 600
+    font-family: "roboto-medium";
+    src: url("../fonts/Roboto-Medium.woff") format('woff');
+    font-weight: 600;
 }
-*, :after, :before {
+
+*,
+*:after,
+*:before {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
+
 body {
     padding-top: 1px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    background: var(--darkest)
+    background: var(--darkest);
+    color: var(--light);
 }
+
 a {
-    text-decoration: none
+    text-decoration: none;
+    color: var(--light);
 }
+
 .btn {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: normal;
     padding: 8px 12px;
-    border: 2px solid #333;
+    border: 2px solid var(--darkest);
+    border-radius: 3px;
+    color: var(--darkest);
     margin: 0 5px;
     background: var(--light);
-    outline: 0
+    box-shadow: 2px 2px var(--dark);
+    outline: none;
 }
+
+.quote-item a {
+    border-bottom: 1px solid #0B0BBD;
+    padding-bottom: 6px;
+    color: blue;
+}
+
+.active {
+    background: #CECECE;
+}
+
+.highlight {
+    color: #b300de;
+}
+
 .main {
-    position: relative
+    position: relative;
 }
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;;
+    z-index: -5;
+}
+
 .top-header {
     text-align: center;
-    padding-top: 30px
 }
+
 div.container {
     width: 950px;
-    margin: auto
+    margin: auto;
 }
+
+.top-header {
+    padding-top: 30px;
+}
+
 .brand {
     float: left;
-    text-align: left
+    text-align: left;
 }
+
 .brand h1 {
     font-size: 40px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
+
 .brand p {
     margin-bottom: 30px;
     font-size: 17px;
     font-family: roboto-light;
 }
+
 .top-header:after {
     clear: both;
     content: ' ';
-    display: block
+    display: block;
 }
+
 .top-nav {
     float: right;
-    line-height: 80px
+    line-height: 80px;
 }
+
 .main-content {
-    margin-top: 80px
+    margin-top: 80px;
 }
+
 .content-item {
     display: block;
     width: 295px;
@@ -96,92 +144,134 @@ div.container {
     background: var(--dark);
     float: left;
     position: relative;
-    margin: 0 20px 20px 0;
+    margin: 0 20px 20px 0px;
     border-radius: 4px;
-    color: var(--lightest)
+    box-shadow: none;
+    color: var(--light);
+    position: relative;
+    overflow: hidden;
 }
+
 .content-item .header {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 17px;
     margin-bottom: 10px;
-    color: var(--lightest)
+    overflow: hidden;
 }
+
 .content-item p.tagline {
-    font-weight: 400;
-    font-size: 14px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
     line-height: 20px;
-    color: var(--light)
 }
+
 .content-item .footer {
+  color: var(--blue);
     position: absolute;
     bottom: 12px;
-    color: var(--blue)
 }
+
 div.footer span.footer-stat {
     margin: 0 10px 0 0;
-    font-size: 13px
+    font-size: 13px;
 }
+
+.batch-head {
+    position: relative;
+    top: -25px;
+}
+
+.batch-head a {
+    margin: 0 11px 0 0;
+    border: 2px solid;
+    padding: 5px 12px;
+    box-shadow: 2px 2px;
+    font-family: roboto-regular;
+}
+
 .clearfix {
-    clear: both
+    clear: both;
 }
+
 .loading-more {
     text-align: center;
-    margin: -50px auto 50px
+    margin: -50px auto 50px;
 }
+
 .loading-more h3 {
-    font-size: 20px
+    font-size: 20px;
 }
+
 .date-head {
     margin: -40px 20px 40px 0;
-    padding: 8px 0 8px 10px;
-    font-weight: 400;
+    padding: 8px 0px 8px 10px;
+    font-weight: normal;
     font-size: 16px;
-    text-align: center
+    text-align: center;
 }
+
 h1.date-head:first-letter {
-    text-transform: capitalize
+    text-transform: capitalize;
 }
+
 .btn.btn-select {
     padding-left: 0;
     padding-right: 0;
     position: relative;
     cursor: pointer;
     border-color: var(--light);
-    border-radius: 2px;
 }
+
 .btn-select select {
     font-size: 16px;
     line-height: 20px;
     border: 0;
-    border-radius: 0px;
+    border-radius: 0;
     height: 34px;
     -webkit-appearance: none;
     display: inline-block;
-    width: 140px;
-    outline: 0;
-    background-color: var(--light);
-    padding: 0 5px 0 10px;
-    cursor: pointer
+    width: 150px;
+    outline: none;
+    background: var(--light);
+    padding: 0px 5px 0px 10px;
+    cursor: pointer;
 }
+
 .btn-select .fa {
     position: absolute;
     right: 5px;
     top: 10px;
-    color: var(--darkest)
 }
+
 div.footer span.footer-stat .fa {
-    margin-right: 2px
+    margin-right: 2px;
 }
+
 .hide {
-    display: none
+    display: none;
 }
+
 .content-batch {
-    margin-bottom: 80px
+    margin-bottom: 80px;
 }
+
 .content-item .header a {
     display: block;
     width: 100%;
-    text-overflow: ellipsis!important;
+    text-overflow: ellipsis !important;
     white-space: nowrap;
-    overflow: hidden
+    overflow: hidden;
+}
+
+.muted {
+    color: var(--green);
+}
+
+.quote-item {
+    margin: 60px 0 20px;
+    padding: 20px 10px;
+    background: #ccc;
 }
