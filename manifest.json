@@ -5,7 +5,7 @@
   "name": "GitHunt Dark",
   "short_name": "GitHunt Dark",
   "description": "A new tab page that displays the top trending GitHub repositories.",
-  "version": "2.6",
+  "version": "2.8",
   "permissions": [
     "tabs",
     "storage",
