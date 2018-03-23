@@ -1,11 +1,11 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
+  "update_url": "https://clients2.google.com/service/update2/crx",
 
   "manifest_version": 2,
   "name": "GitHunt Dark",
   "short_name": "GitHunt Dark",
   "description": "A new tab page that displays the top trending GitHub repositories.",
-  "version": "2.8",
+  "version": "2.9",
   "permissions": [
     "tabs",
     "storage",

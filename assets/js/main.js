@@ -4,17 +4,17 @@
  */
 function HubTab() {
 
-    var trendingRequest = false,              // To make sure that there are no parallel requests
+    var trendingRequest = false, // To make sure that there are no parallel requests
         repoGroupSelector = '.content-batch', // Batch of repositories
-        filterSelector = '.repos-filter',     // Selector that matches every repo filter on page
-        mainContainer = '.main-content',      // Main container div
-        dateHead = '.date-head',              // Heading item for the batch of repositories
-        dateAttribute = 'date',               // Date attribute on the date head of batch
+        filterSelector = '.repos-filter', // Selector that matches every repo filter on page
+        mainContainer = '.main-content', // Main container div
+        dateHead = '.date-head', // Heading item for the batch of repositories
+        dateAttribute = 'date', // Date attribute on the date head of batch
         // token = 'a1a420cbad0a4d3eccda',    // API token. Don't grin, it's a dummy
-        languageFilter = '#language',         // Filter for repositories language
-        dateFilter = '#date-jump',            // Date jump filter i.e. weekly, monthly or yearly
-        tokenStorageKey = 'githunt_token',    // Storage key for the github token
-        requestCount = 0,                     // Track the count of how many times the refresh was tried
+        languageFilter = '#language', // Filter for repositories language
+        dateFilter = '#date-jump', // Date jump filter i.e. weekly, monthly or yearly
+        tokenStorageKey = 'githunt_token', // Storage key for the github token
+        requestCount = 0, // Track the count of how many times the refresh was tried
         reposApiUrl = 'https://api.github.com/search/repositories', // URL for the repos
 
         // All the content from last hunt will be cached in localstorage for some time to avoid
@@ -44,10 +44,10 @@ function HubTab() {
             var repFullName = $('<div>').text(repository.full_name).html();
             var repFullDesc = $('<div>').text(repository.description).html();
 
-            if(repFullDesc === '') {
+            if (repFullDesc === '') {
                 repFullDesc = '<i>No description or website provided</i>';
             }
-            
+
             html += '<div class="content-item">' +
                 '<div class="header"><a href="' + repository.html_url + '">' + repFullName + '</a></div>' +
                 '<p class="tagline">' + repFullDesc + '</p>' +
@@ -192,7 +192,7 @@ function HubTab() {
             return false;
         }
 
-        if(shouldRefresh() === false) {
+        if (shouldRefresh() === false) {
             return false;
         }
 
@@ -209,7 +209,7 @@ function HubTab() {
                 var finalHtml = generateReposHtml(data.items, filters.dateRange.lower, filters.dateRange.upper);
                 $(mainContainer).append(finalHtml);
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 var error = JSON.parse(xhr.responseText),
                     message = error.message || '';
 
